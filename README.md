@@ -7,3 +7,9 @@ Removes said file once the disk runs full.
 
     windd.exe /h
     windd.exe [file_name]
+
+## Why use this tool?
+
+Because it can cleanup after it filled your disk like this:
+
+    dd if=/dev/zero of=/tmp/null bs=16M & rm /tmp/null
