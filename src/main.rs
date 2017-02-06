@@ -8,6 +8,7 @@ use std::io::prelude::*;
 use std::fs::{File, remove_file};
 use std::env::args as arguments;
 
+/// 1mB buffer
 const BUFFER_LENGTH: usize = 1024 * 1024;
 static RUNNING: AtomicBool = ATOMIC_BOOL_INIT;
 
