@@ -2,7 +2,7 @@
 //! After the new file consumed all available space the file will be removed.
 
 extern crate ctrlc;
-use std::sync::atomic::{AtomicBool, Ordering, ATOMIC_BOOL_INIT};
+use std::sync::atomic::{AtomicBool, Ordering};
 
 use std::io::prelude::*;
 use std::fs::{File, remove_file};
@@ -10,7 +10,7 @@ use std::env::args as arguments;
 
 /// 1mB buffer
 const BUFFER_LENGTH: usize = 1024 * 1024;
-static RUNNING: AtomicBool = ATOMIC_BOOL_INIT;
+static RUNNING: AtomicBool = AtomicBool::new(false);
 
 fn main() {
   RUNNING.store(true, Ordering::Relaxed);
