@@ -12,4 +12,4 @@ Removes said file once the disk runs full.
 
 Because it can cleanup after it filled your disk like this:
 
-    dd if=/dev/zero of=/tmp/null bs=16M & rm /tmp/null
+    dd if=/dev/zero of=/tmp/null bs=16M ; sync ; rm /tmp/null
